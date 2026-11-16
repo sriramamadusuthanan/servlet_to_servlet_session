@@ -33,9 +33,12 @@ public class Welcome extends HttpServlet {
 		response.setContentType("text/html");
 		HttpSession session = request.getSession();
 		String username= (String)session.getAttribute("uname");
-		
+		// message from quary rewritng
+		String prname= request.getParameter("querymessage");
 		PrintWriter out = response.getWriter();
+		
 		out.print("<h1> welcome "+username+"</h1>");
+		out.print("message from quary rewriting: "+prname);
 		
 	}
 

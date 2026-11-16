@@ -30,12 +30,17 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		String message = request.getParameter("message");
 		
 		if(username.equals("sriram") && password.equals("123") )
 		{
 			HttpSession session = request.getSession();
 			session.setAttribute("uname", username);
-			response.sendRedirect("Welcome");
+			//line 40 simple redirect to welcome servlet
+			//response.sendRedirect("Welcome");
+			
+			//line 43 redirect and pass the message in the url(?querymessage="+message)
+			response.sendRedirect("Welcome?querymessage="+message);
 			
 		}else
 		{
