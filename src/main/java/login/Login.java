@@ -1,6 +1,8 @@
 package login;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,6 +43,9 @@ public class Login extends HttpServlet {
 			
 			//line 43 redirect and pass the message in the url(?querymessage="+message)
 			response.sendRedirect("Welcome?querymessage="+message);
+			
+			
+			
 			
 		}else
 		{

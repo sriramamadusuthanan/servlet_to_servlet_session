@@ -39,7 +39,9 @@ public class Welcome extends HttpServlet {
 		
 		out.print("<h1> welcome "+username+"</h1>");
 		out.print("message from quary rewriting: "+prname);
-		
+		//information from hidden input
+		String hiddenValue = request.getParameter("hiddenvalue");
+		out.print("<h1> message from hidden field"+ hiddenValue +"</h1>");
 	}
 
 }
